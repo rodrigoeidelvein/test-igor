@@ -37,17 +37,29 @@ String.prototype.replaceAt = function (index, replacement) {
 
 describe("PaintBucket", () => {
   it("should paint the line", () => {
-    const input = [".###..", ".#..#.", ".###..", ".#...."];
+    const input = [".###..",
+                   ".#..#.",
+                   ".###..",
+                   ".#...."];
 
-    const expectedOutput = [".OOO..", ".O..#.", ".OOO..", ".O...."];
+    const expectedOutput = [".OOO..",
+                            ".O..#.",
+                            ".OOO..",
+                            ".O...."];
 
     expect(paintBucket(input, [0, 1], input[0][1], "O")).toStrictEqual(expectedOutput);
   });
 
   it("should paint another thing", () => {
-    const input = [".###.", ".#..#.", ".###..", ".#...."];
+    const input = [".###.",
+                   ".#..#.",
+                   ".###..",
+                   ".#...."];
 
-    const expectedOutput = [".###.", ".#oo#.", ".###..", ".#...."];
+    const expectedOutput = [".###.",
+                            ".#oo#.",
+                            ".###..",
+                            ".#...."];
 
     expect(paintBucket(input, [1, 3], input[1][3], "o")).toStrictEqual(
       expectedOutput
@@ -55,9 +67,15 @@ describe("PaintBucket", () => {
   })
 
   it("should paint another thing", () => {
-    const input = [".###.", ".#..#.", ".###..", ".#...."];
+    const input = [".###.",
+                   ".#..#.",
+                   ".###..",
+                   ".#...."];
 
-    const expectedOutput = [".###.", ".####.", ".###..", ".#...."];
+    const expectedOutput = [".###.",
+                            ".####.",
+                            ".###..",
+                            ".#...."];
 
     expect(paintBucket(input, [1, 3], input[1][3], "#")).toStrictEqual(
       expectedOutput
