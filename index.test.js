@@ -43,4 +43,24 @@ describe("PaintBucket", () => {
 
     expect(paintBucket(input, [0, 1], input[0][1], "O")).toStrictEqual(expectedOutput);
   });
+
+  it("should paint another thing", () => {
+    const input = [".###.", ".#..#.", ".###..", ".#...."];
+
+    const expectedOutput = [".###.", ".#oo#.", ".###..", ".#...."];
+
+    expect(paintBucket(input, [1, 3], input[1][3], "o")).toStrictEqual(
+      expectedOutput
+    );
+  })
+
+  it("should paint another thing", () => {
+    const input = [".###.", ".#..#.", ".###..", ".#...."];
+
+    const expectedOutput = [".###.", ".####.", ".###..", ".#...."];
+
+    expect(paintBucket(input, [1, 3], input[1][3], "#")).toStrictEqual(
+      expectedOutput
+    );
+  });
 });
